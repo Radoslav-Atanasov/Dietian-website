@@ -1,0 +1,9 @@
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-div-right img {
+  width: 25px;
+  height: auto;
+}
