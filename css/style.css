@@ -1,9 +1,97 @@
-header {
-  display: flex;
-  justify-content: space-between;
-}
 
+/*Header*/
+.header-div-left {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #adc743;
+	padding: 20px;
+}
+.header-div-left > :first-child {
+	font-size: 21px;
+	color: #fff;
+	text-transform: uppercase;
+	font-family: 'Shippori Mincho B1', serif;
+}
+.header-div-left > :last-child {
+	color: #555353;
+	font-family: 'Shippori Mincho B1', serif;
+}
+.navigation {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 525px;
+}
+.navigation a {
+	color: #565553;
+	transition: all, ease-in, 0.5s;
+}
+.navigation a:hover {
+	text-decoration: none;
+	color: #6b7a2b;
+}
+.header-div-right{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-width: 290px;
+}
 .header-div-right img {
   width: 25px;
   height: auto;
+  margin-right: 10px;
+}
+.facebook-class {
+	margin-left: 60px;
+}
+.login {
+	color: #565553;
+	display: flex;
+	transition: all, ease-in, 0.5s;
+	transform: scale(1.5);
+}
+.login:hover {
+	text-decoration: none;
+	color: #000;
+}
+
+/*Section2*/
+
+.section2 {
+	height: 600px;
+	background-image: url("../images/Vegetables-BG.jpg");
+	background-size: cover;
+	display: flex;
+}
+.left-div2 {
+	width: 350px;
+	opacity: 0.85;
+	background-color: #fff;
+	padding: 100px 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+.section2-text {
+	font-family: 'Shippori Mincho B1', serif;
+	font-size: 36px;
+	font-weight: 700;
+	color: #555353;
+	text-align: justify;
+}
+.section2-button {
+	font-family: 'Shippori Mincho B1', serif;
+	background-color: #adc743;
+	color: #fff;
+	padding: 10px 30px;
+	transition: all, ease-in, 0.5s
+}
+.section2-button:hover {
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+	background-color: #6b7a2b;
 }
