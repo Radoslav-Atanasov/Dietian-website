@@ -1,62 +1,3 @@
-
-/*Header*/
-.header-div-left {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
-	background-color: #adc743;
-	padding: 20px;
-}
-.header-div-left > :first-child {
-	font-size: 21px;
-	color: #fff;
-	text-transform: uppercase;
-	font-family: 'Shippori Mincho B1', serif;
-}
-.header-div-left > :last-child {
-	color: #555353;
-	font-family: 'Shippori Mincho B1', serif;
-}
-.navigation {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	width: 525px;
-}
-.navigation a {
-	color: #565553;
-	transition: all, ease-in, 0.5s;
-}
-.navigation a:hover {
-	text-decoration: none;
-	color: #6b7a2b;
-}
-.header-div-right{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	min-width: 290px;
-}
-.header-div-right img {
-  width: 25px;
-  height: auto;
-  margin-right: 10px;
-}
-.facebook-class {
-	margin-left: 60px;
-}
-.login {
-	color: #565553;
-	display: flex;
-	transition: all, ease-in, 0.5s;
-	transform: scale(1.5);
-}
-.login:hover {
-	text-decoration: none;
-	color: #000;
-}
-
 /*Section2*/
 
 .section2 {
@@ -66,7 +7,7 @@
 	display: flex;
 }
 .left-div2 {
-	width: 350px;
+	width: 25%;
 	opacity: 0.85;
 	background-color: #fff;
 	padding: 100px 50px;
@@ -87,11 +28,152 @@
 	background-color: #adc743;
 	color: #fff;
 	padding: 10px 30px;
-	transition: all, ease-in, 0.5s
+	transition: all, ease-in, 0.5s;
+	white-space: nowrap;
 }
 .section2-button:hover {
 	color: #fff;
 	text-decoration: none;
 	cursor: pointer;
 	background-color: #6b7a2b;
+}
+
+/*Section3 - grid*/
+
+.grid-container {
+	display: grid;
+	height: 100%;
+	grid-template-columns: repeat(20, 5%);
+	grid-template-rows: repeat(31, 68px);
+}
+.el1 {
+	background-image: url(../images/girl.jpg);
+	background-size: cover;
+	grid-area: 1 / 1 / 8 / 6;
+}
+.el2 {
+	background-color: #f0f0f0;
+	grid-area: 1 / 6 / 8 / 21;
+	padding: 80px 150px;
+	font-family: 'Shippori Mincho B1', serif;
+}
+.el2 > p {
+	transform: translateY(-30px);
+	text-align: justify;
+}
+.el2 > a {
+	color: #adc743;
+	transition: all, ease-in, 0.8s;
+}
+.el2 > a:hover {
+	text-decoration: none;
+	color: #adc743;
+	transform: scale(1.1);
+}
+.el3 {
+	background-color: #aca298;
+	color: #fff;
+	font-size: 24px;
+	grid-area: 8 / 4 / 10 / 6;
+	text-decoration: none;
+	font-family: 'Shippori Mincho B1', serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.el3:hover {
+	color: #fff;
+	text-decoration: none;
+}
+.el4 {
+	background-color: #adc743;
+	grid-area: 8 / 6 / 13 / 16;
+	padding: 50px 150px;
+	font-size: 17px;
+}
+.el4 > a {
+	color: #fff;
+	font-size: 26px;
+}
+.el5 {
+	background-image: url(../images/salad.jpg);
+	background-size: cover;
+	grid-area: 13 / 1 / 20 / 13;
+}
+.el6 {
+	background-color: #adc743;
+	grid-area: 20 / 8 / 22 / 10;
+	align-items: center;
+	color: #fff;
+	font-family: 'Shippori Mincho B1', serif;
+	font-size: 18px;
+	transition: all, ease-in, 0.5s;
+}
+.el6:hover {
+	color: #fff;
+	background-color: #94a941;
+}
+.el7 {
+	background-color: #f0f0f0;
+	grid-area: 20 / 10 / 24 / 18;
+	padding: 50px 70px;
+}
+.el7 > a {
+	font-size: 24px;
+	color: #555353;
+}
+.el7 > p {
+	color: #696363;
+}
+.el8 {
+	background-image: url(../images/apples.jpg);
+	background-size: cover;
+	grid-area: 24 / 3 / 32 / 10;
+}
+
+/*----------------footer---------------*/
+
+.footer {
+	display: grid;
+	grid-template-columns: repeat(3, 33.333%);
+	grid-template-rows: 250px 60px;
+	background-image: url(../images/wooden-floor.jpeg);
+	background-size: cover;
+}
+.f-el1 {
+	border-right: 1px solid #adc743;
+	margin: 50px 0;
+	padding-right: 30px;
+	align-items: flex-end;
+	justify-content: center;
+}
+.f-el1 > * {
+	color: #000;
+}
+.f-el2 {
+	border-right: 1px solid #adc743;
+	margin: 50px 0;
+	padding-right: 30px;
+	align-items: center;
+}
+.f-el2 > * {
+	color: #000;
+}
+.f-el3 {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	padding: 80px 0;
+
+}
+.f-el4 {
+	grid-area: 2 / 1 / 3 / 4;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+.f-el4 > p {
+	margin: 0;
 }
