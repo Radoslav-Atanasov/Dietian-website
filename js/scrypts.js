@@ -34,13 +34,10 @@ $(".btn-services2").on("click", function(){
 
 //toggle dropdown menu in Blog 
 $(document).ready(function(){
-	$("#dropdownMenu").hide();
+	$(".dropdownMenu").hide();
 })
 $(".three-dots").on("click", function(){
-	if ($("#dropdownMenu").is("hide()")) {
-		$("#dropdownMenu").show();
-		console.log("baaasi");
-	} else {
-		$("#dropdownMenu").hide();
-	}
+	$(".dropdownMenu").hide();
+	$(this).next().toggle("slow");
 });
+

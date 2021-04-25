@@ -375,7 +375,11 @@
 
 
 /*---------Blog-------*/
-
+.blog-section {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
 .blog-search-section {
 	display: flex;
 	justify-content: space-between;
@@ -412,6 +416,7 @@
 .blog-item {
 	min-width: 300px;
 	max-width: 400px;
+	margin-bottom: 30px;
 	display: grid;
 	grid-template-columns: 100%;
 	grid-template-rows: 300px 50px 260px 50px;
@@ -497,13 +502,51 @@
 	cursor: pointer;
 	
 }
-#dropdownMenu {
+.dropdownMenu {
 	width: auto;
 	height: auto;
 	position: absolute;
-	right: -80px;
-	top: 13px;
+	right: 60px;
+	top: 0px;
 	background-color: #adc743;
 	cursor: pointer;
 	transition: all ease-in 0.3s;
+}
+.blog-grid-1-2{
+	background-image: url(../images/blog-img-2.jpg);
+}
+.blog-grid-1-3{
+	background-image: url(../images/blog-img-3.jpg);
+}
+.blog-grid-1-4{
+	background-image: url(../images/blog-img-4.jpg);
+}
+.blog-grid-1-5{
+	background-image: url(../images/blog-img-5.jpg);
+}
+.blog-grid-1-6{
+	background-image: url(../images/blog-img-6.jpg);
+}
+
+
+/*CSS for blog-moadl*/
+.blog-modal * {
+	margin-bottom: 20px;
+}
+.blog-modal-box {
+	border-left: solid 3px #adc743;
+}
+.blog-modal-box p, .blog-modal-box h5 {
+	margin-left: 20px;
+}
+.blog-modal img {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+.blog-modal-btn {
+	background-color: #adc743;
+}
+.close span {
+	color: #adc743;
 }
