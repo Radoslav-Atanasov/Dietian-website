@@ -4,6 +4,9 @@ p {
 * {
 	font-family: 'Shippori Mincho B1', serif;
 }
+html {
+	scroll-behavior: smooth;
+}
 .main-container {
   max-width: 1360px;
   width: 100%;
@@ -22,6 +25,71 @@ p {
 	text-decoration: none;
 }
 
+/*---Service-Options---*/
+.services-container {
+	max-width: 1360px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 50px;
+}
+.services-back-button {
+	font-weight: 700;
+	font-size: 20px;
+	margin-left: 50px;
+	color: #adc743;
+	cursor: pointer;
+}
+.services-back-button:hover {
+	text-decoration: none;
+	color: #adc743;
+}
+.section1-services_1 {
+	text-align: center;
+	padding: 50px 0;
+}
+.section1-services_1 > h1 {
+	font-weight: 700;
+	margin-bottom: 50px;
+}
+.section1-services_1 > p {
+	font-weight: 700;
+	font-size: 20px;
+	margin-bottom: 50px;	
+}
+.section2-services_1 {
+	text-align: center;
+}
+.section3-services_1 {
+	padding: 60px 300px;
+}
+.section3-services_1 h5 {
+	font-weight: 700;
+	margin: 50px 0px;
+}
+.section3-services_1 > .section2-button {
+	margin: 30px 0;
+	display: inline-block;
+}
+.div-line {
+	width: 100%;
+	border-top: solid 1px #8c8c8c;
+	margin-bottom: 60px;
+}
+@media(max-width: 1024px) {
+	.section2-services_1 img {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.section3-services_1 {
+		padding: 60px 100px;
+	}
+}
+@media (max-width: 720px) {
+	.section3-services_1 {
+		padding: 60px 30px;
+	}
+}
 
 /*Header*/
 .header-div-left {
@@ -37,24 +105,30 @@ p {
 	color: #fff;
 	text-transform: uppercase;
 	font-family: 'Shippori Mincho B1', serif;
+	white-space: nowrap;
 }
 .header-div-left > :last-child {
 	color: #555353;
 	font-family: 'Shippori Mincho B1', serif;
 }
+.header-div-left > a:hover {
+	text-decoration: none;
+	transform: scale(1.05);
+}
 .navigation {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	width: 525px;
+	width: 475px;
 }
 .navigation a {
 	color: #555553;
-	transition: all, ease-in, 0.3s;
+	transition: all, ease-in, 0.2s;
 }
 .navigation a:hover {
 	text-decoration: none;
 	color: #6b7a2b;
+	transform: translateY(-1px);
 }
 .navigation a:active {
 	color: yellow;
@@ -70,6 +144,10 @@ p {
   height: auto;
   margin-right: 10px;
 }
+.header-div-right img:hover {
+	transform: translateY(-1px);
+	
+}
 .facebook-class {
 	margin-left: 60px;
 }
@@ -79,13 +157,80 @@ p {
 	transition: all, ease-in, 0.5s;
 	transform: scale(1.5);
 }
+.login-responsive {
+	transform: scale(1);
+}
+.login-responsive img {
+	width: 50px;
+	margin-right: 20px;
+
+}
 .login:hover {
 	text-decoration: none;
 	color: #000;
 }
-
+.menu-icon {
+	display: none;
+	width: 30px;
+	height: 30px;
+	margin-top: auto;
+	margin-bottom: auto;
+	cursor: pointer;
+	margin-right: 20px;
+}
+@media (max-width: 1024px) {
+	.navigation{
+		display: none;
+	}
+	.header-div-right {
+		min-width: auto;
+	}
+	.header-div-right a:not(:first-child) {
+		display: none;
+	}
+	.menu-icon {
+		display: block;
+		margin-right: 20px;
+	}
+	.login {
+		display: none;
+	}
+}
+@media (min-width: 1024px) {
+	.navigation-responsive {
+		display: none;
+	}
+}
+.navigation-responsive {
+	position: absolute;
+	background-color: #fff;
+	width: 100%;
+	z-index: 10;
+	opacity: 0.95;
+	display: none;
+}
+.navigation-responsive div {
+	padding: 10px 0 10px 30px;
+}
+.navigation-responsive div:hover {
+	background-color: #f2f2f2;
+}
+.navigation-responsive a {
+	display: block;
+	font-size: 20px;
+	color: #000;
+}
+.navigation-responsive a:hover {
+	text-decoration: none;
+	transform: translateY(-1px);
+}
+.show-menu {
+	display: block;
+}
+.hide-menu {
+	display: none;
+}
 .BG-section {
-	background-image: url(../images/wooden-floor.jpeg);
 	width: 100%;
 	height: 150px;
 	display: flex;
@@ -93,8 +238,61 @@ p {
 	align-items: center;
 }
 .BG-section-text {
-
 	font-size: 46px;
 	font-weight: 700;
 	font-family: 'Shippori Mincho B1', serif;
+	font-style: italic;
+}
+#BgSection {
+	background-image: url(../images/wooden-floor.jpeg);
+}
+/*----------------footer---------------*/
+
+.footer {
+	display: grid;
+	grid-template-columns: repeat(3, 33.333%);
+	grid-template-rows: 250px 60px;
+	background-image: url(../images/wooden-floor.jpeg);
+	background-size: cover;
+}
+.f-el1 {
+	border-right: 1px solid #adc743;
+	margin: 50px 0;
+	padding-right: 30px;
+	align-items: flex-end;
+	justify-content: center;
+}
+.f-el1 > * {
+	color: #000;
+}
+.f-el2 {
+	border-right: 1px solid #adc743;
+	margin: 50px 0;
+	padding-right: 30px;
+	align-items: center;
+}
+.f-el2 > * {
+	color: #000;
+}
+.f-el3 {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	padding: 80px 0;
+
+}
+.f-el4 {
+	grid-area: 2 / 1 / 3 / 4;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+.f-el4 > p {
+	margin: 0;
+}
+@media (min-width: 1024px) {
+	.navigation-responsive {
+		display: none;
+	}
 }
