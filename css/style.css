@@ -185,6 +185,42 @@
 	    grid-area: 24 / 3 / 32 / 20;
 	}
 }
+@media (max-width: 400px) {
+	.grid-container {
+		grid-template-rows: repeat(27, 68px);
+	}
+	.el1 {
+		grid-area: 1 / 1 / 8 / 21;
+	}
+	.el2 {
+		grid-area: 8 / 1 / 12 / 21;
+		padding: 0;
+	}
+	.el3 {
+		grid-area: 12 / 1 / 14 / 21;
+	}
+	.el4 {
+		grid-area: 14 / 1 / 16 / 21;
+	}
+	.el4 > p {
+		display: none;
+	}
+	.el5 {
+		grid-area: 16 / 1 / 20 / 21;
+	}
+	.el6 {
+	    grid-area: 20 / 1 / 22 / 21;	
+	}	
+	.el7 {
+		grid-area: 22 / 1 / 26 / 21;
+	}
+	.el7 > p {
+		display: none;
+	}
+	.el8 {
+	    grid-area: 26 / 1 / 28 / 21;
+	}
+}
 
 
 /*----------About-----------*/
@@ -239,7 +275,25 @@
 		align-self: center;
 	}
 }
-
+@media (max-width: 720px) {
+	.about-el1 {
+		grid-area: 1 / 1 / 5 / 11;
+	}
+	.about-el2 {
+		grid-area: 5 / 1 / 8 / 11;
+		padding: 0;
+		text-align: justify;
+	}
+	.about-el2 > :last-child {
+		display: none;
+	}
+	.about-el2 :first-child {
+		text-align: center;
+	}
+	.about-el3 {
+		grid-area: 8 / 1 / 11 / 11;
+	}
+}
 
 /*---------Services---------*/
 
@@ -560,6 +614,7 @@
 	cursor: pointer;
 }
 .dropdownMenu {
+	display: none;
 	width: auto;
 	height: auto;
 	position: absolute;
@@ -569,6 +624,22 @@
 	cursor: pointer;
 	transition: all ease-in 0.3s;
 	border-radius: 4px;
+	opacity: 0;
+}
+.dropdownMenu-show {
+	display: block;
+	width: auto;
+	height: auto;
+	position: absolute;
+	right: 60px;
+	top: 0px;
+	background-color: #adc743;
+	cursor: pointer;
+	transition: all ease-in 0.3s;
+	border-radius: 4px;
+	font-size: 16px;
+	padding: 4px 18px;
+	margin-top: 5px;
 }
 .dropdownMenu-hide {
 	display: none;

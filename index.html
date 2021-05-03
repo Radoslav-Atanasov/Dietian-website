@@ -3,12 +3,14 @@
 <head>
 	<title>Dietian website</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/shared.css">	
 	<link rel="stylesheet" type="text/css" href="css/reset.css">	
-	<link rel="stylesheet" type="text/css" href="css/style.css">	
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">	
 </head>
 <body>
 	<header id="header">
@@ -108,8 +110,8 @@
 		</nav>		
 		<div class="main-container">
 				<div class="left-div2">
-					<span class="section2-text">"Let food be thy medicine and medicine be thy food"</span>
-					<a href="Services.html" class="section2-button">Book a Session</a>
+					<span data-aos="fade-up" data-aos-duration="1500"  class="section2-text">"Let food be thy medicine and medicine be thy food"</span>
+					<a data-aos="fade-up" data-aos-duration="1500" href="Services.html" class="section2-button">Book a Session</a>
 				</div>
 		</div>
 	</section>
@@ -117,20 +119,20 @@
 		<div class="main-container grid-container">
 			<div class="el1"></div>
 			<div class="el2 flex-container">
-				<h4>Meet Alison</h4>
-				<p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
-				<a href="about.html">Read More ></a>
+				<h4 data-aos="fade-up" data-aos-duration="1500">Meet Alison</h4>
+				<p data-aos="fade-up" data-aos-duration="1500">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+				<a data-aos="fade-up" data-aos-duration="1500" href="about.html">Read More ></a>
 			</div>
-			<a class="el3" href="Blog.html">Blog</a>
+			<a data-aos="fade-up" data-aos-duration="1500" class="el3" href="Blog.html">Blog</a>
 			<div class="el4 flex-container">
-				<a class="a-tag-reset" href="Blog.html">Recipes & Tips</a>
-				<p>I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+				<a data-aos="fade-up" data-aos-duration="1500" class="a-tag-reset" href="Blog.html">Recipes & Tips</a>
+				<p data-aos="fade-up" data-aos-duration="1500">I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.</p>
 			</div>
 			<div class="el5"></div>
-			<a class="el6 a-tag-reset flex-container" href="Services.html">Services</a>
+			<a  class="el6 a-tag-reset flex-container" href="Services.html">Services</a>
 			<div class="el7 flex-container">
-				<a class="a-tag-reset" href="Services.html">Family & Group Nutrition Counseling</a>
-				<p>I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you. </p>
+				<a data-aos="fade-up" data-aos-duration="1500" class="a-tag-reset" href="Services.html">Family & Group Nutrition Counseling</a>
+				<p data-aos="fade-up" data-aos-duration="1500">I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you. </p>
 			</div>
 			<div class="el8"></div>
 		</div>
@@ -158,8 +160,13 @@
 			<p>© 2023 by Alison Knight. Proudly created with Wix.com</p>
 		</div>
 	</footer>
-<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/scrypts.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/scrypts.js"></script>
+	<script>
+	  AOS.init();
+	</script>
 </body>
 </html>
+<div data-aos="fade-up"></div>

@@ -1,4 +1,3 @@
-
 // Fade in and out in plans
 $(document).ready(function(){
 	$(".option-container-B").hide();
@@ -15,27 +14,6 @@ $(".btn-services2").on("click", function(){
 	$(".option-container-B").fadeIn(300, "linear");
 	$(".btn-services1").removeClass("active-btn");
 	$(".btn-services2").addClass("active-btn");
-});
-
-//toggle dropdown menu in Blog 
-$(document).ready(function(){
-	$(".dropdownMenu").hide();
-})
-// $(".three-dots").on("click", function(){
-// 	$(".dropdownMenu").fadeOut();
-// 	$(this).next().show("slow");
-// });
-
-
-let clickCounter = 0
-$(".three-dots").on("click", function(){
-	clickCounter++
-	if (clickCounter % 2 == 1) {
-		$(this).next().show("slow");
-	} else {
-		$(this).next().hide("slow");
-	}
-	console.log(clickCounter);
 });
 
 // contact - google map
@@ -78,9 +56,7 @@ window.addEventListener('scroll', function(){
   parallax.style.backgroundPosition = (0 + 'px' + ' ' + (-0.3) *relScrollPosition + 'px');
 });
 
-
-/*----- Password Validation ends -----*/
-
+// ---- Login Modal ----
 $(".login").on("click", function(){ //show the log in modal
   $('#myModall').modal("toggle");
 });
@@ -98,7 +74,6 @@ $("#myModal2").on("hidden.bs.modal", function(){ // reset the reg form after clo
   $("#IdPassValid, #IdErrPass, #IdNotSamePass").hide();
   $("#passReq").show();
 });
-
 
 /*----- Password Validation -----*/
   $("#inputPassword").keyup(function (inputtt) {
@@ -129,67 +104,62 @@ $("#myModal2").on("hidden.bs.modal", function(){ // reset the reg form after clo
         }
     }
     function passValidation (upCaseCount, loCaseCount, numCount, specSymbCount) {
-    let printUpCaseCount
-    let printLoCaseCount
-    let printNumCount
-    let printspecSymbCount
-    let isValidCount = 0;
-    if (upCaseCount < minChar) {
-        printUpCaseCount = ((minChar - upCaseCount) + " Uppercase characters ");
-        isValidCount++;
-    } else {
-        printUpCaseCount = "";
-    }
-    if (loCaseCount < minChar) {
-        printLoCaseCount = (minChar - loCaseCount + " Lowercase characters ");
-        isValidCount++;
-    } else {
-        printLoCaseCount = "";
-    } 
-    if (numCount < minChar) {
-        printNumCount = (minChar - numCount + " Number characters ");
-        isValidCount++;
-    } else {
-        printNumCount = "";
-    }
-    if (specSymbCount < minChar) {
-        printSpecSymbCount = (minChar - specSymbCount + " pecial symbols ");
-        isValidCount++;
-    } else {
-        printSpecSymbCount = "";
-    }
-    if (isValidCount === 0) {
-        document.getElementById("IdPassValid").innerHTML = ("Your password is Valid!");
-        document.getElementById("IdPassValid").style.color = "green";
-        document.getElementById("IdErrPass").style.display = "none";
-        document.getElementById("IdPassValid").style.display = "block";
-        document.getElementById("submitReg").removeAttribute("disabled");
-        $("#inputPassword").removeClass("inputPassword-Error");
-        $("#inputPassword").addClass("inputPassword-Valid");
+	    let printUpCaseCount
+	    let printLoCaseCount
+	    let printNumCount
+	    let printspecSymbCount
+	    let isValidCount = 0;
+	    if (upCaseCount < minChar) {
+	        printUpCaseCount = ((minChar - upCaseCount) + " Uppercase characters ");
+	        isValidCount++;
+	    } else {
+	        printUpCaseCount = "";
+	    }
+	    if (loCaseCount < minChar) {
+	        printLoCaseCount = (minChar - loCaseCount + " Lowercase characters ");
+	        isValidCount++;
+	    } else {
+	        printLoCaseCount = "";
+	    } 
+	    if (numCount < minChar) {
+	        printNumCount = (minChar - numCount + " Number characters ");
+	        isValidCount++;
+	    } else {
+	        printNumCount = "";
+	    }
+	    if (specSymbCount < minChar) {
+	        printSpecSymbCount = (minChar - specSymbCount + " pecial symbols ");
+	        isValidCount++;
+	    } else {
+	        printSpecSymbCount = "";
+	    }
+	    if (isValidCount === 0) {
+	        document.getElementById("IdPassValid").innerHTML = ("Your password is Valid!");
+	        document.getElementById("IdPassValid").style.color = "green";
+	        document.getElementById("IdErrPass").style.display = "none";
+	        document.getElementById("IdPassValid").style.display = "block";
+	        document.getElementById("submitReg").removeAttribute("disabled");
+	        $("#inputPassword").removeClass("inputPassword-Error");
+	        $("#inputPassword").addClass("inputPassword-Valid");
 
-    } else {
-        document.getElementById("IdErrPass").innerHTML = ("Your must add " + printUpCaseCount + printLoCaseCount + printNumCount + printSpecSymbCount + " to your password!");
-        document.getElementById("IdErrPass").style.color = "red";
-        document.getElementById("IdPassValid").style.display = "none";
-        document.getElementById("IdErrPass").style.display = "block";
-        document.getElementById("submitReg").setAttribute("disabled", "");
-        $("#inputPassword").addClass("inputPassword-Error");
-        $("#inputPassword").removeClass("inputPassword-Valid");
-
-
-
-    }
-    // console.log(upCaseCount, loCaseCount, numCount, specSymbCount);
-    upCaseCount = 0;
-    loCaseCount = 0;
-    numCount = 0;
-    specSymbCount = 0;
-    otherSymbolsCount = 0;
-    isValidCount = 0;
-}
-passValidation (upCaseCount, loCaseCount, numCount, specSymbCount);
-
-});
+	    } else {
+	        document.getElementById("IdErrPass").innerHTML = ("Your must add " + printUpCaseCount + printLoCaseCount + printNumCount + printSpecSymbCount + " to your password!");
+	        document.getElementById("IdErrPass").style.color = "red";
+	        document.getElementById("IdPassValid").style.display = "none";
+	        document.getElementById("IdErrPass").style.display = "block";
+	        document.getElementById("submitReg").setAttribute("disabled", "");
+	        $("#inputPassword").addClass("inputPassword-Error");
+	        $("#inputPassword").removeClass("inputPassword-Valid");
+	    }
+	    upCaseCount = 0;
+	    loCaseCount = 0;
+	    numCount = 0;
+	    specSymbCount = 0;
+	    otherSymbolsCount = 0;
+	    isValidCount = 0;
+		}
+		passValidation (upCaseCount, loCaseCount, numCount, specSymbCount);
+	});
 
 
 /*Set the input background color on focus*/
@@ -208,14 +178,12 @@ $("#inputPassword, #repeatInputPassword").keyup(function(){
       console.log(repPassValue);
     }
  })
-
 $("#submitReg").on("click", function(){
   let passValue = document.getElementById("inputPassword").value;;
   let repPassValue = document.getElementById("repeatInputPassword").value; 
   if (passValue !== repPassValue) {
     $("#IdNotSamePass").addClass("notSamePassClassShow");
     $("#IdNotSamePass").removeClass("notSamePassClass");
-        console.log("ebasi");
   } else {
       $("#IdNotSamePass").addClass("notSamePassClass");
       $("#IdNotSamePass").removeClass("notSamePassClassShow");
@@ -233,3 +201,15 @@ $(".menu-icon").on("click", function(){
 });
 
 
+// ------- Show-Hide dropdownMenu on Plans page ---------
+$(".three-dots").on("click", function(){
+	$(".three-dots").not(this).next().addClass("dropdownMenu");
+	$(".dropdownMenu-show").not(this).removeClass("dropdownMenu-show");
+	if ($(this).next().hasClass("dropdownMenu") === true ) {
+		$(this).next().addClass("dropdownMenu-show");
+		$(this).next().removeClass("dropdownMenu");
+	} else {
+		$(this).next().removeClass("dropdownMenu-show");
+		$(this).next().addClass("dropdownMenu");
+	}
+});
