@@ -128,7 +128,7 @@ $("#myModal2").on("hidden.bs.modal", function(){ // reset the reg form after clo
 	        printNumCount = "";
 	    }
 	    if (specSymbCount < minChar) {
-	        printSpecSymbCount = (minChar - specSymbCount + " pecial symbols ");
+	        printSpecSymbCount = (minChar - specSymbCount + " Special symbols ");
 	        isValidCount++;
 	    } else {
 	        printSpecSymbCount = "";
