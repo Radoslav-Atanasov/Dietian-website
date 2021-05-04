@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dietian website</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/shared.css">	
+	<link rel="stylesheet" type="text/css" href="css/reset.css">	
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<header id="header">
+
+		<!-- LogIn modal starts -->
+			<div id="myModall" class="modal" tabindex="-1">
+			  <div class="modal-dialog modal-lg">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title">Sign Up</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+					<form id="loginForm">
+			        	<label>E-Mail</label>
+			        	<input type="email" required="" name="" placeholder="E-mail" id="inputEmail">
+			        	<label>Password</label>
+			        	<input type="Password" required="" name="" placeholder="Password" value="">
+			        	<div class="wrapToReg"><a class="toReg" id="toRegID">Don't have an account?</a></div><!--  Wrapping the a tag with a div, so the a tag can be pushed to the right -->
+		        	</form>
+
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			        <button type="button" class="btn btn-primary login-modal-btn">Sign Up</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>		
+		<!-- LogIn modal ends -->
+
+		<!-- Sign Up modal starts -->
+		<div class="modal fade" id="myModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      	<div class="modal-header">		
+		        <h5 class="modal-title myClassH5Modal" id="exampleModalLabel">Create new account</h5>
+		     	</div>
+		      	<div class="modal-body">
+		      	<form id="regForm">
+			        <label for="email">E-mail</label>
+			        <input type="email" name="" placeholder="E-mail" required="">
+			        <label for="password">Password</label>
+			        <input type="password" id="inputPassword" name="" placeholder="password" required="">
+			        <div class="wrapIdPassValid"><span id="IdPassValid" class="IdPassValidClass"></span></div>
+			        <label for="password">Repeat your password</label>
+			        <input type="password" name="" placeholder="password" required="" id="repeatInputPassword">
+			        <span id="IdNotSamePass" class="notSamePassClass">The password is not the same</span>
+			        <span id="IdErrPass"></span>
+			        <span id="passReq">Your password must include at least three Uppercase and three Lowercase characters, three digits and three special symbols.</span>
+		        			
+			    </form>
+		      	</div>
+		      	<div class="modal-footer">
+		      	<button type="button" id="closelReg" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	        	<button type="Submit" id="submitReg" class="btn btn-primary btnModalLogin btn-lg" form="regForm" disabled>Submit</button>
+		      	</div>
+		    </div>
+		  </div>
+		</div>
+		<!-- Sign Up modal ends -->
+		<div class="main-container">
+			<div class="header-div-left">
+				<a href="index.html">alison knight</a>
+				<a href="index.html">Nutritionist</a>
+			</div>
+			<nav class="navigation">
+				<a href="index.html">home</a>
+				<a href="about.html">about alison</a>
+				<a href="services.html">services</a>
+				<a href="plans.html">plans</a>
+				<a href="blog.html">blog</a>
+				<a href="contact.html">contact</a>
+			</nav>
+			<div class="header-div-right">
+				<a class="login" href="#"><img src="images/login.png">Log in</a>
+				<a class="facebook-class" href="https://www.facebook.com/"><img src="images/facebook.png" alt="facebook"></a>
+				<a href="https://twitter.com/"><img src="images/twitter.png" alt="twitter"></a>
+				<a href="https://www.pinterest.com/"><img src="images/pinterest.png" alt="printerest"></a>
+				<a href="https://www.instagram.com/"><img src="images/instagram.png" alt="instagram"></a>
+			</div>
+			<img class="menu-icon" src="images/menu.png">
+		</div>
+	</header>
+	<nav id="navigation-responsive" class="navigation-responsive">
+		<div><a href="index.html">home</a></div>
+		<div><a href="about.html">about alison</a></div>
+		<div><a href="services.html">services</a></div>
+		<div><a href="plans.html">plans</a></div>
+		<div><a href="blog.html">blog</a></div>
+		<div><a href="contact.html">contact</a></div>
+		<div><a class="login login-responsive" href="#"><img src="images/login.png">Log in</a></div>
+	</nav>		
+	<section id="BgSection" class="BG-section">
+		<h1 data-aos="fade-up" data-aos-duration="1500" class="BG-section-text">Blog</h1>
+	</section>
+	<section class="blog-search-section">
+		<div data-aos="fade-up" data-aos-duration="500" class="filter-div">
+			<a href="#">All Posts</a>
+			<a href="#">Living Well</a>
+			<a href="#">Healthy Tips</a>
+			<a href="#">Recipes</a>
+		</div>
+		<a data-aos="fade-up" data-aos-duration="500" class="a-search-icon" href="#"><img class="search-icon" src="images/loupe.png"></a>
+	</section>
+	<section class="blog-section">
+
+		<!-- modal1-starts -->
+		<div id="myModal" class="modal" tabindex="-1">
+		  <div class="modal-dialog modal-lg">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		      	<h5 class="modal-title">Eating well on any budget</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body blog-modal">
+		      	<h4>Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading.</h4>
+		      	<img class="blog-modal-img" src="images/blog-img-1.jpg">
+		      	<p>Welcome to your blog post. Use this space to connect with your readers and potential customers in a way that’s current and interesting. Think of it as an ongoing conversation where you can share updates about business, trends, news, and more. </p>
+		      	<h4>Design with Ease</h4>
+		      	<div class="blog-modal-box">
+		      		<p>Do you have a design in mind for your blog? Whether you prefer a trendy postcard look or you’re going for a more editorial style blog - there’s a stunning layout for everyone. 
+					</p>
+		      	</div>
+		      	<p>Every layout comes with the latest social features built in. Readers will be able to easily share posts on social networks like Facebook and Twitter, view how many people have liked a post, made comments and more. With the Wix, building your online community has never been easier.</p>
+		      	<h4>Create Relevant Content</h4>
+		      	<p>You’ll be posting loads of engaging content, so be sure to keep your blog organized with Categories that also allow readers to explore more of what interests them. Each category of your blog has its own page that’s fully customizable. Add a catchy title, a brief description and a beautiful image to the category page header to truly make it your own. You can also add tags (<a>#vacation</a> <a>#dream</a> <a>#summer</a>) throughout your posts to reach more people, and help readers search for relevant content. Using hashtags can expand your post reach and help people find the content that matters to them. Go ahead, <a>#hashtag away</a>.</p>
+		      	<h4>Stun Your Readers</h4>
+		      	<div class="blog-modal-box">
+		      		<h5>Be original, show off your style, and tell your story.</h5>
+		      	</div>
+		      	<p>Blogging gives your site a voice, so let your business’ personality shine through. Are you a creative agency? Go wild with original blog posts about recent projects, cool inspirational ideas, or what your company culture is like. Add images, and videos to really spice it up, and pepper it with slang to keep readers interested. Are you a programmer? Stay on the more technical side by offering weekly tips, tricks, and hacks that show off your knowledge of the industry. No matter what type of business you have, one thing is for sure - blogging gives your business the opportunity to be heard in a way in a different and unconventional way.</p>
+		      	<h4>Get Inspired</h4>
+		      	<p>To keep up with all things Wix, including website building tips and interesting articles, head over to to the Wix Blog. You may even find yourself inspired to start crafting your own blog, adding unique content, and stunning images and videos. Start creating your own blog now. Good luck!</p>
+
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary blog-modal-btn" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>		
+		<!-- modal1-ends -->
+
+		<!-- modal2-starts -->
+		<div id="myModal-2" class="modal" tabindex="-1">
+		  <div class="modal-dialog modal-lg">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		      	<h5 class="modal-title">Eating well on any budget</h5>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body blog-modal">
+		      	<h1>Eating well on any budget</h2>
+		      	<h4>Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading.</h4>
+		      	<img class="blog-modal-img" src="images/blog-img-2.jpg">
+		      	<p>Welcome to your blog post. Use this space to connect with your readers and potential customers in a way that’s current and interesting. Think of it as an ongoing conversation where you can share updates about business, trends, news, and more. </p>
+		      	<h4>Design with Ease</h4>
+		      	<div class="blog-modal-box">
+		      		<p>Do you have a design in mind for your blog? Whether you prefer a trendy postcard look or you’re going for a more editorial style blog - there’s a stunning layout for everyone. 
+					</p>
+		      	</div>
+		      	<p>Every layout comes with the latest social features built in. Readers will be able to easily share posts on social networks like Facebook and Twitter, view how many people have liked a post, made comments and more. With the Wix, building your online community has never been easier.</p>
+		      	<h4>Create Relevant Content</h4>
+		      	<p>You’ll be posting loads of engaging content, so be sure to keep your blog organized with Categories that also allow readers to explore more of what interests them. Each category of your blog has its own page that’s fully customizable. Add a catchy title, a brief description and a beautiful image to the category page header to truly make it your own. You can also add tags (<a>#vacation</a> <a>#dream</a> <a>#summer</a>) throughout your posts to reach more people, and help readers search for relevant content. Using hashtags can expand your post reach and help people find the content that matters to them. Go ahead, <a>#hashtag away</a>.</p>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary blog-modal-btn" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+		  </div>s
+		</div>		
+		<!-- modal2-ends -->
+
+		<!-- modal3-starts -->
+		<div id="myModal-3" class="modal" tabindex="-1">
+			  <div class="modal-dialog modal-lg">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			      	<h5 class="modal-title">10 Foods to relieve stress</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body blog-modal">
+			      	<h4>Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading.</h4>
+			      	<img class="blog-modal-img" src="images/blog-img-3.jpg">
+			      	<p>Welcome to your blog post. Use this space to connect with your readers and potential customers in a way that’s current and interesting. Think of it as an ongoing conversation where you can share updates about business, trends, news, and more. </p>
+			      	<h4>Design with Ease</h4>
+			      	<div class="blog-modal-box">
+			      		<p>Do you have a design in mind for your blog? Whether you prefer a trendy postcard look or you’re going for a more editorial style blog - there’s a stunning layout for everyone. 
+						</p>
+			      	</div>
+			      	<p>Every layout comes with the latest social features built in. Readers will be able to easily share posts on social networks like Facebook and Twitter, view how many people have liked a post, made comments and more. With the Wix, building your online community has never been easier.</p>
+			      	<h4>Create Relevant Content</h4>
+			      	<p>You’ll be posting loads of engaging content, so be sure to keep your blog organized with Categories that also allow readers to explore more of what interests them. Each category of your blog has its own page that’s fully customizable. Add a catchy title, a brief description and a beautiful image to the category page header to truly make it your own. You can also add tags (<a>#vacation</a> <a>#dream</a> <a>#summer</a>) throughout your posts to reach more people, and help readers search for relevant content. Using hashtags can expand your post reach and help people find the content that matters to them. Go ahead, <a>#hashtag away</a>.</p>
+			      	<h4>Stun Your Readers</h4>
+			      	<div class="blog-modal-box">
+			      		<h5>Be original, show off your style, and tell your story.</h5>
+			      	</div>
+			      	<p>Blogging gives your site a voice, so let your business’ personality shine through. Are you a creative agency? Go wild with original blog posts about recent projects, cool inspirational ideas, or what your company culture is like. Add images, and videos to really spice it up, and pepper it with slang to keep readers interested. Are you a programmer? Stay on the more technical side by offering weekly tips, tricks, and hacks that show off your knowledge of the industry. No matter what type of business you have, one thing is for sure - blogging gives your business the opportunity to be heard in a way in a different and unconventional way.</p>
+			      	<h4>Get Inspired</h4>
+			      	<p>To keep up with all things Wix, including website building tips and interesting articles, head over to to the Wix Blog. You may even find yourself inspired to start crafting your own blog, adding unique content, and stunning images and videos. Start creating your own blog now. Good luck!</p>
+
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary blog-modal-btn" data-dismiss="modal">Close</button>
+			      </div>
+			    </div>
+			  </div>
+		</div>	
+		<!-- modal3-ends -->
+
+		<!-- molal4-starts -->
+
+		<div id="myModal-4" class="modal" tabindex="-1">
+			  <div class="modal-dialog modal-lg">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			      	<h5 class="modal-title">Making the most out of your veggies</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body blog-modal">
+			      	<h4>Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading.</h4>
+			      	<img class="blog-modal-img" src="images/blog-img-4.jpg">
+			      	<p>Welcome to your blog post. Use this space to connect with your readers and potential customers in a way that’s current and interesting. Think of it as an ongoing conversation where you can share updates about business, trends, news, and more. </p>
+			      	<h4>Design with Ease</h4>
+			      	<div class="blog-modal-box">
+			      		<p>Do you have a design in mind for your blog? Whether you prefer a trendy postcard look or you’re going for a more editorial style blog - there’s a stunning layout for everyone. 
+						</p>
+			      	</div>
+			      	<p>Every layout comes with the latest social features built in. Readers will be able to easily share posts on social networks like Facebook and Twitter, view how many people have liked a post, made comments and more. With the Wix, building your online community has never been easier.</p>
+			      	<h4>Create Relevant Content</h4>
+			      	<p>You’ll be posting loads of engaging content, so be sure to keep your blog organized with Categories that also allow readers to explore more of what interests them. Each category of your blog has its own page that’s fully customizable. Add a catchy title, a brief description and a beautiful image to the category page header to truly make it your own. You can also add tags (<a>#vacation</a> <a>#dream</a> <a>#summer</a>) throughout your posts to reach more people, and help readers search for relevant content. Using hashtags can expand your post reach and help people find the content that matters to them. Go ahead, <a>#hashtag away</a>.</p>
+
+
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary blog-modal-btn" data-dismiss="modal">Close</button>
+			      </div>
+			    </div>
+			  </div>
+		</div>
+
+		<!-- modal4-ends -->
+
+		<!-- modal5-starts -->
+
+		<div id="myModal-5" class="modal" tabindex="-1">
+			  <div class="modal-dialog modal-lg">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			      	<h5 class="modal-title">How dietitians fuel for the morning</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body blog-modal">
+			      	<h4>Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading.</h4>
+			      	<img class="blog-modal-img" src="images/blog-img-5.jpg">
+			      	<p>Welcome to your blog post. Use this space to connect with your readers and potential customers in a way that’s current and interesting. Think of it as an ongoing conversation where you can share updates about business, trends, news, and more. </p>
+			      	<h4>Design with Ease</h4>
+			      	<div class="blog-modal-box">
+			      		<p>Do you have a design in mind for your blog? Whether you prefer a trendy postcard look or you’re going for a more editorial style blog - there’s a stunning layout for everyone. 
+						</p>
+			      	</div>
+			      	<p>Every layout comes with the latest social features built in. Readers will be able to easily share posts on social networks like Facebook and Twitter, view how many people have liked a post, made comments and more. With the Wix, building your online community has never been easier.</p>
+			      	<h4>Create Relevant Content</h4>
+			      	<p>You’ll be posting loads of engaging content, so be sure to keep your blog organized with Categories that also allow readers to explore more of what interests them. Each category of your blog has its own page that’s fully customizable. Add a catchy title, a brief description and a beautiful image to the category page header to truly make it your own. You can also add tags (<a>#vacation</a> <a>#dream</a> <a>#summer</a>) throughout your posts to reach more people, and help readers search for relevant content. Using hashtags can expand your post reach and help people find the content that matters to them. Go ahead, <a>#hashtag away</a>.</p>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary blog-modal-btn" data-dismiss="modal">Close</button>
+			      </div>
+			    </div>
+			  </div>
+		</div>	
+		<!-- modal5-ends -->
+
+		<!-- modal6-starts -->
+
+		<div id="myModal-6" class="modal" tabindex="-1">
+			  <div class="modal-dialog modal-lg">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			      	<h5 class="modal-title">What’s for dinner</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body blog-modal">
+			      	<h4>Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading.</h4>
+			      	<img class="blog-modal-img" src="images/blog-img-6.jpg">
+			      	<p>Welcome to your blog post. Use this space to connect with your readers and potential customers in a way that’s current and interesting. Think of it as an ongoing conversation where you can share updates about business, trends, news, and more. </p>
+			      	<h4>Design with Ease</h4>
+			      	<div class="blog-modal-box">
+			      		<p>Do you have a design in mind for your blog? Whether you prefer a trendy postcard look or you’re going for a more editorial style blog - there’s a stunning layout for everyone. 
+						</p>
+			      	</div>
+			      	<p>Every layout comes with the latest social features built in. Readers will be able to easily share posts on social networks like Facebook and Twitter, view how many people have liked a post, made comments and more. With the Wix, building your online community has never been easier.</p>
+			      	<h4>Create Relevant Content</h4>
+			      	<p>You’ll be posting loads of engaging content, so be sure to keep your blog organized with Categories that also allow readers to explore more of what interests them. Each category of your blog has its own page that’s fully customizable. Add a catchy title, a brief description and a beautiful image to the category page header to truly make it your own. You can also add tags (<a>#vacation</a> <a>#dream</a> <a>#summer</a>) throughout your posts to reach more people, and help readers search for relevant content. Using hashtags can expand your post reach and help people find the content that matters to them. Go ahead, <a>#hashtag away</a>.</p>
+			      	<h4>Stun Your Readers</h4>
+			      	<div class="blog-modal-box">
+			      		<h5>Be original, show off your style, and tell your story.</h5>
+			      	</div>
+			      	<p>Blogging gives your site a voice, so let your business’ personality shine through. Are you a creative agency? Go wild with original blog posts about recent projects, cool inspirational ideas, or what your company culture is like. Add images, and videos to really spice it up, and pepper it with slang to keep readers interested. Are you a programmer? Stay on the more technical side by offering weekly tips, tricks, and hacks that show off your knowledge of the industry. No matter what type of business you have, one thing is for sure - blogging gives your business the opportunity to be heard in a way in a different and unconventional way.</p>
+			      	<h4>Get Inspired</h4>
+			      	<p>To keep up with all things Wix, including website building tips and interesting articles, head over to to the Wix Blog. You may even find yourself inspired to start crafting your own blog, adding unique content, and stunning images and videos. Start creating your own blog now. Good luck!</p>
+
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary blog-modal-btn" data-dismiss="modal">Close</button>
+			      </div>
+			    </div>
+			  </div>
+		</div>		
+
+		<!-- modal6-ends -->
+		<div class="blog-item"> <!-- box-1 -->
+			<div class="blog-grid-1 blog-grid-1-1" data-toggle="modal" data-target="#myModal"></div>
+			<div class="blog-grid-2">
+				<div>
+					<img src="images/icon-avatar.png">
+					<p>Feb 28 - 2 min</p>
+				</div>
+
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical three-dots" viewBox="0 0 16 16">
+ 		 			<path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+				</svg>
+				<div id="dropdownMenu" class="dropdownMenu">
+					Share Post
+				</div>
+
+			</div>
+			<div class="blog-grid-3" data-toggle="modal" data-target="#myModal">
+				<h3 data-aos="fade-up" data-aos-duration="1500">Eating well on any budget</h3>
+				<p id="clamp-p">Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading</p>
+			</div>
+			<div class="blog-grid-4">
+				<div>
+					<p>0 views</p>
+					<a href="#">0 comments</a>
+				</div>
+				<div class="blog-grid-4-heart">
+					<p id="countLikes"></p>
+					<img src="images/heart-icon.png">
+				</div>
+			</div> 
+		</div>
+		<div class="blog-item"> <!-- box-2 -->
+			<div class="blog-grid-1 blog-grid-1-2" data-toggle="modal" data-target="#myModal-2"></div>
+			<div class="blog-grid-2">
+				<div>
+					<img src="images/icon-avatar.png">
+					<p>Feb 28 - 2 min</p>
+				</div>
+
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical three-dots" viewBox="0 0 16 16">
+ 		 			<path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+				</svg>
+				<div class="dropdownMenu">
+					Share Post
+				</div>
+
+			</div>
+			<div class="blog-grid-3" data-toggle="modal" data-target="#myModal-2">
+				<h3 data-aos="fade-up" data-aos-duration="1500">Recipe of the day</h3>
+				<p id="clamp-p">Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading</p>
+			</div>
+			<div class="blog-grid-4">
+				<div>
+					<p>0 views</p>
+					<a href="#">0 comments</a>
+				</div>
+				<div class="blog-grid-4-heart">
+					<p id="countLikes"></p>
+					<img src="images/heart-icon.png">
+				</div>
+			</div>	
+		</div>
+		<div class="blog-item"> <!-- box-3 -->
+			<div class="blog-grid-1 blog-grid-1-3" data-toggle="modal" data-target="#myModal-3"></div>
+			<div class="blog-grid-2">
+				<div>
+					<img src="images/icon-avatar.png">
+					<p>Feb 28 - 2 min</p>
+				</div>
+
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical three-dots" viewBox="0 0 16 16">
+ 		 			<path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+				</svg>
+				<div class="dropdownMenu">
+					Share Post
+				</div>
+
+			</div>
+			<div class="blog-grid-3" data-toggle="modal" data-target="#myModal-3">
+				<h3 data-aos="fade-up" data-aos-duration="1500">10 Foods to relieve stress			</h3>
+				<p id="clamp-p">Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading</p>
+			</div>
+			<div class="blog-grid-4">
+				<div>
+					<p>0 views</p>
+					<a href="#">0 comments</a>
+				</div>
+				<div class="blog-grid-4-heart">
+					<p id="countLikes"></p>
+					<img src="images/heart-icon.png">
+				</div>
+			</div> 
+		</div>
+		<div class="blog-item"> <!-- box-4 -->
+			<div class="blog-grid-1 blog-grid-1-4" data-toggle="modal" data-target="#myModal-4"></div>
+			<div class="blog-grid-2">
+				<div>
+					<img src="images/icon-avatar.png">
+					<p>Feb 28 - 2 min</p>
+				</div>
+
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical three-dots" viewBox="0 0 16 16">
+ 		 			<path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+				</svg>
+				<div class="dropdownMenu">
+					Share Post
+				</div>
+
+			</div>
+			<div class="blog-grid-3" data-toggle="modal" data-target="#myModal-4">
+				<h3 data-aos="fade-up" data-aos-duration="1500">Making the most out of your veggies</h3>
+				<p id="clamp-p">Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading</p>
+			</div>
+			<div class="blog-grid-4">
+				<div>
+					<p>0 views</p>
+					<a href="#">0 comments</a>
+				</div>
+				<div class="blog-grid-4-heart">
+					<p id="countLikes"></p>
+					<img src="images/heart-icon.png">
+				</div>
+			</div> 
+		</div>
+		<div class="blog-item"> <!-- box-5 -->
+			<div class="blog-grid-1 blog-grid-1-5" data-toggle="modal" data-target="#myModal-5"></div>
+			<div class="blog-grid-2">
+				<div>
+					<img src="images/icon-avatar.png">
+					<p>Feb 28 - 2 min</p>
+				</div>
+
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical three-dots" viewBox="0 0 16 16">
+ 		 			<path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+				</svg>
+				<div class="dropdownMenu">
+					Share Post
+				</div>
+
+			</div>
+			<div class="blog-grid-3" data-toggle="modal" data-target="#myModal-5">
+				<h3 data-aos="fade-up" data-aos-duration="1500">How dietitians fuel for the morning</h3>
+				<p id="clamp-p">Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading</p>
+			</div>
+			<div class="blog-grid-4">
+				<div>
+					<p>0 views</p>
+					<a href="#">0 comments</a>
+				</div>
+				<div class="blog-grid-4-heart">
+					<p id="countLikes"></p>
+					<img src="images/heart-icon.png">
+				</div>
+			</div>
+		</div>
+		<div class="blog-item"> <!-- box-6 -->
+			<div class="blog-grid-1 blog-grid-1-6" data-toggle="modal" data-target="#myModal-6"></div>
+			<div class="blog-grid-2">
+				<div>
+					<img src="images/icon-avatar.png">
+					<p>Feb 28 - 2 min</p>
+				</div>
+
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical three-dots" viewBox="0 0 16 16">
+ 		 			<path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+				</svg>
+				<div class="dropdownMenu">
+					Share Post
+				</div>
+
+			</div>
+			<div class="blog-grid-3" data-toggle="modal" data-target="#myModal-6">
+				<h3 data-aos="fade-up" data-aos-duration="1500">What’s for dinner</h3>
+				<p id="clamp-p">Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue readingCreate a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading</p>
+			</div>
+			<div class="blog-grid-4">
+				<div>
+					<p>0 views</p>
+					<a href="#">0 comments</a>
+				</div>
+				<div class="blog-grid-4-heart">
+					<p id="countLikes"></p>
+					<img src="images/heart-icon.png">
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer id="BGParallaxFooter" class="footer">
+		<div class="f-el1 flex-container">
+			<p>500 Terry Francois Street</p>
+			<p>San Francisco, CA 94158</p>
+			<a class="a-tag-reset" href="mailto:info@mysite.com">info@mysite.com</a>
+		</div>
+		<div class="f-el2 flex-container">
+			<a class="a-tag-reset" href="#header">ALISON KNIGHT</a>
+			<a class="a-tag-reset" href="#header">Nutritionist</a>
+		</div>
+		<div class="f-el3">
+			<p>Tel: 123-456-7890</p>
+			<div>
+				<a class="a-tag-reset" href="https://www.facebook.com/"><img src="images/facebook.png"></a>
+				<a class="a-tag-reset" href="https://twitter.com/"><img src="images/twitter.png"></a>
+				<a class="a-tag-reset" href="https://www.pinterest.com/"><img src="images/pinterest.png"></a>
+				<a class="a-tag-reset" href="https://www.instagram.com/"><img src="images/instagram.png"></a>
+			</div>
+		</div>
+		<div class="f-el4">
+			<p>© 2023 by Alison Knight. Proudly created with Wix.com</p>
+		</div>
+	</footer>>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/scrypts.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>

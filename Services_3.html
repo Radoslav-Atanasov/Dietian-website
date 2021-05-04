@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Personal Nutrition Counseling</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/shared.css">	
+	<link rel="stylesheet" type="text/css" href="css/reset.css">	
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<header id="header">
+
+		<!-- LogIn modal starts -->
+			<div id="myModall" class="modal" tabindex="-1">
+			  <div class="modal-dialog modal-lg">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title">Sign Up</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+					<form id="loginForm">
+			        	<label>E-Mail</label>
+			        	<input type="email" required="" name="" placeholder="E-mail" id="inputEmail">
+			        	<label>Password</label>
+			        	<input type="Password" required="" name="" placeholder="Password" value="">
+			        	<div class="wrapToReg"><a class="toReg" id="toRegID">Don't have an account?</a></div><!--  Wrapping the a tag with a div, so the a tag can be pushed to the right -->
+		        	</form>
+
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			        <button type="button" class="btn btn-primary login-modal-btn">Sign Up</button>
+			      </div>
+			    </div>
+			  </div>
+			</div>		
+		<!-- LogIn modal ends -->
+
+		<!-- Sign Up modal starts -->
+		<div class="modal fade" id="myModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      	<div class="modal-header">		
+		        <h5 class="modal-title myClassH5Modal" id="exampleModalLabel">Create new account</h5>
+		     	</div>
+		      	<div class="modal-body">
+		      	<form id="regForm">
+			        <label for="email">E-mail</label>
+			        <input type="email" name="" placeholder="E-mail" required="">
+			        <label for="password">Password</label>
+			        <input type="password" id="inputPassword" name="" placeholder="password" required="">
+			        <div class="wrapIdPassValid"><span id="IdPassValid" class="IdPassValidClass"></span></div>
+			        <label for="password">Repeat your password</label>
+			        <input type="password" name="" placeholder="password" required="" id="repeatInputPassword">
+			        <span id="IdNotSamePass" class="notSamePassClass">The password is not the same</span>
+			        <span id="IdErrPass"></span>
+			        <span id="passReq">Your password must include at least three Uppercase and three Lowercase characters, three digits and three special symbols.</span>
+		        			
+			    </form>
+		      	</div>
+		      	<div class="modal-footer">
+		      	<button type="button" id="closelReg" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	        	<button type="Submit" id="submitReg" class="btn btn-primary btnModalLogin btn-lg" form="regForm" disabled>Submit</button>
+		      	</div>
+		    </div>
+		  </div>
+		</div>
+		<!-- Sign Up modal ends -->
+		<div class="main-container">
+			<div class="header-div-left">
+				<a href="index.html">alison knight</a>
+				<a href="index.html">Nutritionist</a>
+			</div>
+			<nav class="navigation">
+				<a href="index.html">home</a>
+				<a href="about.html">about alison</a>
+				<a href="services.html">services</a>
+				<a href="plans.html">plans</a>
+				<a href="blog.html">blog</a>
+				<a href="contact.html">contact</a>
+			</nav>
+			<div class="header-div-right">
+				<a class="login" href="#"><img src="images/login.png">Log in</a>
+				<a class="facebook-class" href="https://www.facebook.com/"><img src="images/facebook.png" alt="facebook"></a>
+				<a href="https://twitter.com/"><img src="images/twitter.png" alt="twitter"></a>
+				<a href="https://www.pinterest.com/"><img src="images/pinterest.png" alt="printerest"></a>
+				<a href="https://www.instagram.com/"><img src="images/instagram.png" alt="instagram"></a>
+			</div>
+			<img class="menu-icon" src="images/menu.png">
+		</div>
+	</header>
+	<nav id="navigation-responsive" class="navigation-responsive">
+		<div><a href="index.html">home</a></div>
+		<div><a href="about.html">about alison</a></div>
+		<div><a href="services.html">services</a></div>
+		<div><a href="plans.html">plans</a></div>
+		<div><a href="blog.html">blog</a></div>
+		<div><a href="contact.html">contact</a></div>
+		<div><a class="login login-responsive" href="#"><img src="images/login.png">Log in</a></div>
+	</nav>	
+	<div class="services-container">
+		<div>
+			<a href="services.html" class="services-back-button">< Back</a>
+		</div>
+		<section class="section1-services_1">
+			<h1 data-aos="fade-up" data-aos-duration="1500">Sustainable Weight Management</h1> <!-- Heading -->
+			<p>1h | $70</p>
+			<a class="section2-button">Book Now</a>
+		</section> 
+		<section class="section2-services_1">
+			<img src="images/service_3-img.jpg">
+		</section>
+		<section class="section3-services_1">
+			<p>Describe your service here. What makes it great? Tell people what you offer, where it’s available and the price.</p>
+			<h5 data-aos="fade-up" data-aos-duration="1500">Book Online</h5>
+			<p>Personal Nutrition Counseling</p>
+			<p>1hr | $100</p>
+			<a class="section2-button" href="#">Book Now</a>
+			<div class="div-line"></div>
+			<h4 data-aos="fade-up" data-aos-duration="1500">Location & Contact Details</h4>
+			<p>demo-website@gmail.com</p>
+		</section>
+	</div>
+	<footer id="BGParallaxFooter" class="footer">
+		<div class="f-el1 flex-container">
+			<p>500 Terry Francois Street</p>
+			<p>San Francisco, CA 94158</p>
+			<a class="a-tag-reset" href="mailto:info@mysite.com">info@mysite.com</a>
+		</div>
+		<div class="f-el2 flex-container">
+			<a class="a-tag-reset" href="#header">ALISON KNIGHT</a>
+			<a class="a-tag-reset" href="#header">Nutritionist</a>
+		</div>
+		<div class="f-el3">
+			<p>Tel: 123-456-7890</p>
+			<div>
+				<a class="a-tag-reset" href="https://www.facebook.com/"><img src="images/facebook.png"></a>
+				<a class="a-tag-reset" href="https://twitter.com/"><img src="images/twitter.png"></a>
+				<a class="a-tag-reset" href="https://www.pinterest.com/"><img src="images/pinterest.png"></a>
+				<a class="a-tag-reset" href="https://www.instagram.com/"><img src="images/instagram.png"></a>
+			</div>
+		</div>
+		<div class="f-el4">
+			<p>© 2023 by Alison Knight. Proudly created with Wix.com</p>
+		</div>
+	</footer>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/scrypts.js"></script>
+	<script>
+	  AOS.init();
+	</script>
+</body>
+</html>
